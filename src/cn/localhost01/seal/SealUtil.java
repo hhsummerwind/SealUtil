@@ -461,6 +461,8 @@ public abstract class SealUtil {
             } else {
                 transform = AffineTransform.getRotateInstance(Math.PI / 2 - theta + Math.toRadians(8));
             }
+
+            transform.scale(0.5, 1);
             Font f2 = f.deriveFont(transform);
             g2d.setFont(f2);
             g2d.drawString(font.getFontText().substring(i, i + 1), (float) (circleRadius + thetaX + INIT_BEGIN),
@@ -599,6 +601,9 @@ public abstract class SealUtil {
         //4.构造字体
         Font f = new Font(font.getFontFamily(), fontStyle, fontSize);
         g2d.setFont(f);
+
+//        g2d.setFont(f.deriveFont(AffineTransform.getScaleInstance(0.5, 1.0)));
+
 
         FontRenderContext context = g2d.getFontRenderContext();
         String[] fontTexts = font.getFontText().split("\n");

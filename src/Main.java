@@ -10,11 +10,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         /**
-         * 印章配置文件
-         */
-        SealConfiguration configuration = new SealConfiguration();
-
-        /**
          * 主文字
          */
         SealFont mainFont = new SealFont();
@@ -85,6 +80,11 @@ public class Main {
         titleFont.setFontText("\n\n\n\n\n\n集团业务类\n合同专用章");
         titleFont.setMarginSize(60);
 //         titleFont.setMarginSize(100);
+
+        /**
+         * 印章配置文件
+         */
+        SealConfiguration configuration = new SealConfiguration();
 
         /**
          * 添加主文字
